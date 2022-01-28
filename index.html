@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content type" charset=utf-8>
+    <meta name="viewport" content=width=device-width-initial-scale=1>
+    <title>
+        Password Generator
+    </title>
+    <script
+    src="password.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #Bd0cf7;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #random-password {
+            background-color: white;
+            padding-top: 30px;
+            padding: 30px;
+        }
+
+        h2 {
+            position: absolute;
+            top: 30px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 26px;
+            color: #015a96;
+            font-family: sans-serif;
+        }
+
+        #display {
+            padding: 20px;
+            user-select: none;
+            height: 50px;
+            width: 400px;
+            border-radius: 6px;
+            border: none;
+            border: 2px solid #8d0cf7;
+            outline: none;
+            font-size: 22px;
+
+        }
+
+        #password::placeholder {
+            font-size: 23px;
+        }
+
+        #generate {
+            font-family: sans-serif;
+            font-size: 15px;
+            margin-top: 40px;
+            border: 2px solid #7100cf;
+            width: 155px;
+            height: 30px;
+            text-align: center;
+            background-color: #7100cf;
+            display: flex;
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            cursor: pointer;
+        }
+        #copy{
+            margin-left: 85px;
+            font-family: sans-serif;
+            font-size: 15px;
+    
+            border: 2px solid #7100cf;
+            width: 40px;
+            height: 30px;
+            text-align: center;
+            background-color: #7100cf;
+    
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            cursor: pointer;
+        }
+    
+            
+        
+    </style>
+</head>
+
+<body>
+    <h2>Random Password Generator</h2>
+    <div id="random-password">
+        <input type="text" id="display" placeholder="Create Password" readonly required />
+        <button id="copy">Copy</button>
+        <div id="settings">
+            <label for="length">length</label>
+            <input type="number" id="length" value="12" min="8" max="14" />
+            <label for="number">Include Numbers</label>
+            <input type="checkbox" id="numbers" checked />
+            <label for="symbols">Include Symbols</label>
+            <input type="checkbox" id="symbols" checked /></div>
+        <button id="generate">Generate Password</button>
+    </div>
+</body>
+
+</html>
